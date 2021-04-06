@@ -1,0 +1,29 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+<p>
+     1. Dönem
+{% endblock %}
+
+{% block content %}
+<p>
+    İlk dönemde karar verici sizsiniz ve sahip olduğunuz puan = {{Constants.endowment_Decider}}.
+<p>
+    9 puanınızın ne kadarını transfer edersiniz ? (0-7)?
+<p>
+
+    {% formfield group.sent_amount label=prompt %}
+
+<p>
+    Size ne kadar transfer yapılacağını bekliyorsunuz (0-7)?
+</p>
+    {% formfield group.expect_decider label=prompt %}
+
+    <p>
+    {% next_button %}
+    </p>
+
+    {% include Constants.table_template %}
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+{% endblock %}
+
+{% block content %}
+
+<p>
+    <p>Grubunuz : <b>{% if your_color == 'KIRMIZI' %}
+      <p style="color: #ff0000; font-size:100%;"> KIRMIZI </p>
+    {% else %}
+      <p style="color: #0000ff; font-size:100%"> MAVİ </p>
+    {% endif %} </b></p>
+
+    <p>
+        Transfer yapacağınız kişinin sizinle aynı gruptan olması için ne kadar ödersiniz?
+    </p>
+
+    {% formfield player.WTP label=prompt %}
+    <p>
+
+    {% next_button %}
+
+    {% include Constants.table_template %}
+</p>
+
+{% endblock %}

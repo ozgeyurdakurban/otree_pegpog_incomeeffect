@@ -1,0 +1,102 @@
+
+
+
+
+{% block title %}
+<div class="card bg-light instructions" xmlns="http://www.w3.org/1999/html">
+    <div class="card-body">
+
+Deneyimize hoşgeldiniz.
+        {% endblock %}
+
+{% block content %}
+
+<table class="table">
+    <th  colspan="8" style="font-size:24px"> </th>
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.accept.label }}</span> </td>
+            {% for choice in form.accept %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    </tr>
+</table>
+
+<p>
+
+        <strong>10 tur</strong> yapılacak ve her turda <strong>2 dönem</strong> olacaktır.
+        <p>
+        Her dönem, rastgele ve anonim olarak başka bir katılımcıyla eşleşeceksiniz. Daha sonra, aranızdan biri ilk dönem Karar Verici olacak ve diğeri Alıcı olacak. İkinci dönemde roller değişecek. Bir başka deyişle, her iki katılımcı hem Karar verici hem Alıcı olacak.        <p>
+            <style>
+                .asd {
+                    text-indent: initial;
+                 }
+            </style>
+                <body>
+                    <div class ="asd">
+                         <ul style="list-style-type:hoop;">
+                            <li>Karar vericilere 9 birim verilir; Alıcılara ise 1 birim verilir.
+                             </li>
+                             <li>Karar Verici, verilenin hangi kısmını (0-7) Alıcıya transfer edeceğini seçer.
+                             </li>
+                             <li>Alıcı yalnızca transferi alır.
+                                <style>
+                                        .sudo {
+                                            text-indent: 90px;
+                                              }
+                                </style>
+                                         <body>
+                                                <div class ="sudo">
+                                                    <ul style="list-style-type:circle;">
+                                                        <li>Karar vericilerin, alıcı olacakları zaman ne kadar transfer yapılacağını bekledikleri hakkında bilgi vermesi istenir.
+                                                        </li>
+                                                        <li>Bu bilgi Alıcılar ile paylaşılmaz ve kazancınızla hiç bir ilişkisi yoktur. Bu bilgi sadece deneyi analiz ederken tarafımızca kullanılacaktır.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </body>
+                             </li>
+                             <li>Yapılan transfer miktarı T, Karar verici ve Alıcı için sonucu belirleyecektir:
+                             </li>
+                                <style>
+                                        .sudo {
+                                            text-indent: 90px;
+                                              }
+                                </style>
+                                         <body>
+                                                <div class ="sudo">
+                                                    <ul style="list-style-type:circle;">
+                                                        <li>Alıcı EA = 1 + T’ye sahip olur.
+                                                        </li>
+                                                        <li> Karar verici EK = 9 - T’ye sahip olur.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </body>
+
+                             </li>
+                         </ul>
+                    </div>
+                </body>
+        <p>
+        Her tur sonunda, o tur için kazancınız EK x EA = (9 - Tj)x(1 + Ti) olarak hesaplanır. Daha sonra, yeniden rastgele ve anonim olarak başka bir katılımcıyla eşleşirsiniz.        <p>
+        <p>
+        <p>
+        <p>
+
+        <img src="{% static "imagepogT.png" %}"/>
+        <p>
+        <p>
+        Aşağıdaki tablo, Karar verici olduğunuzda Alıcıya yaptığınız transfer ve Alıcı olduğunuzda Karar verici tarafından size yapılan transfere bağlı olarak bir turda elde edebileceğiniz kazançları göstermektedir. Bu tabloda satırlar Karar verici olduğunuzda sizden Alıcıya yapılan transferi ve sütunlar Alıcı olduğunuzda size Karar verici tarafından yapılan transferi gösterir. Yapacağınız transferi satırda ilk olarak bulup sonra size yapılan transferi veren sütuna doğru gittiğinizde, kazancınızı o tur için EK X EA puanı olarak okuyabilirsiniz.
+        </p>
+        <img src="{% static "payofftr.png" %}"/>
+        <p>
+        Transfer oyununa başlamak için <strong>"next"</strong>'e basınız.
+        <p>
+    {% next_button %}
+        </p>
+</div>
+</div>
+
+
+{% endblock %}
+

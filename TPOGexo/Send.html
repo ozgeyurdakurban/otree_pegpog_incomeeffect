@@ -1,0 +1,50 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+<p>
+
+     1. Dönem
+{% endblock %}
+
+{% block content %}
+
+
+    <p>Grubunuz : <b>{% if your_color == 'KIRMIZI' %}
+      <p style="color: red; font-size:100%;"> KIRMIZI </p>
+    {% else %}
+      <p style="color: blue; font-size:100%"> MAVİ </p>
+    {% endif %} </b>
+      </p>
+
+
+    <p>Partnerinizin grubu : <b>{% if partner_color == 'KIRMIZI' %}
+      <p style="color: red; font-size:100%;"> KIRMIZI </p>
+    {% else%}
+      <p style="color: blue; font-size:100%"> MAVİ </p>
+    {% endif %}</b>
+
+      </p>
+
+<p>
+    İlk dönemde karar verici sizsiniz ve sahip olduğunuz puan = {{Constants.endowment_Decider}}.
+<p>
+    9 puanınızın ne kadarını transfer edersiniz ? (0-7)?
+<p>
+
+    {% formfield group.sent_amount label=prompt %}
+
+<p>
+    Size ne kadar transfer yapılacağını bekliyorsunuz (0-7)?
+</p>
+    {% formfield group.expect_decider label=prompt %}
+
+
+
+    <p>
+    {% next_button %}
+    </p>
+
+    {% include Constants.table_template %}
+
+{% endblock %}

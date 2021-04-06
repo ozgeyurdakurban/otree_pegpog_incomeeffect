@@ -1,0 +1,34 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+
+<p>
+
+     1. Dönem
+{% endblock %}
+
+{% block content %}
+<p>
+    İlk dönemde karar verici sizsiniz ve sahip olduğunuz puan = {{subsession.endowment_Decider}}.
+<p>
+    {{subsession.endowment_Decider}} puanınızın ne kadarını transfer edersiniz ? 
+    
+<p>
+
+    {% formfield group.sent_amount label=prompt %}
+
+<p>
+    Size ne kadar transfer yapılacağını bekliyorsunuz (0-{{subsession.maxtosend}})?
+</p>
+    {% formfield group.expect_decider label=prompt %}
+
+
+
+    <p>
+    {% next_button %}
+    </p>
+
+    {% include Constants.table_template %}
+
+{% endblock %}

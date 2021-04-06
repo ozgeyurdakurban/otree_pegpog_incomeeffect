@@ -1,0 +1,21 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+{% endblock %}
+
+{% block content %}
+
+
+</p>
+    Transfer oyununun {{ round_number }}.turuna başlamak için <strong>"next"</strong>'e basınız.
+</p>
+
+    {% next_button %}
+    {% include Constants.table_template %}
+</p>
+
+
+
+{% endblock %}
+

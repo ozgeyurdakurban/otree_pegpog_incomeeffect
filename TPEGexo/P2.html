@@ -1,0 +1,96 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+<p>
+     1. Dönem
+{% endblock %}
+
+{% block content %}
+Sıra numaranız = <b>2</b>
+<p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:8px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:8px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0l91{font-weight:bold;font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-pl7n{font-weight:bold;font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5w2{font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0l91">Sıra</th>
+    <th class="tg-pl7n">1</th>
+    <th class="tg-pl7n" colspan="2">2</th>
+    <th class="tg-pl7n" colspan="2">3</th>
+    <th class="tg-pl7n" colspan="2">4</th>
+    <th class="tg-pl7n" colspan="2">5</th>
+    <th class="tg-pl7n" colspan="2">6</th>
+    <th class="tg-pl7n" colspan="2">7</th>
+    <th class="tg-pl7n">8</th>
+  </tr>
+  <tr>
+    <td class="tg-0l91">Rol</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar verici</td>
+  </tr>
+  <tr>
+    <td class="tg-0l91">Transfer Miktarı</td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+    <td class="tg-l5w2" colspan="2"></td>
+  </tr>
+</table>
+<p>
+<p>
+
+<p>Grubunuz : <b>{% if your_color == 'KIRMIZI' %}
+      <p style="color: red; font-size:100%;"> KIRMIZI </p>
+    {% else %}
+      <p style="color: blue; font-size:100%"> MAVİ </p>
+    {% endif %} </b></p>
+
+
+ <p>Partnerizin grubu : <b>{% if partner_color == 'KIRMIZI' %}
+      <p style="color: red; font-size:100%;"> KIRMIZI </p>
+    {% else%}
+      <p style="color: blue; font-size:100%"> MAVİ </p>
+
+    {% endif %} </b></p>
+ <p>
+<p>
+    Bu turda daha önce bir dönem olmamıştır.
+<p>
+    İlk dönemde karar verici sizsiniz ve sahip olduğunuz puan = {{Constants.endowment_Decider}}.
+<p>
+    9 puanınızın ne kadarını transfer edersiniz ? (0-7)?
+<p>
+    {% formfield group.sent_2 label=prompt %}
+<p>
+
+    Size ne kadar transfer yapılacağını bekliyorsunuz (0-7)?
+</p>
+    {% formfield group.expect_2 label=prompt %}
+
+
+
+    <p>{% next_button %}</p>
+    {% include Constants.table_template %}
+
+{% endblock %}

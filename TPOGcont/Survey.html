@@ -1,0 +1,168 @@
+
+
+{% block title %}
+Anket
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<table class="table">
+    <th  colspan="8" style="font-size:24px"> Yatırım opsiyonları seçimi </th>
+    <tr>
+            <td>{{ form.investment_options_1.label }} </td>
+            {% for choice in form.investment_options_1 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_2.label }} </td>
+            {% for choice in form.investment_options_2 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_3.label }} </td>
+            {% for choice in form.investment_options_3 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_4.label }} </td>
+            {% for choice in form.investment_options_4 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_5.label }} </td>
+            {% for choice in form.investment_options_5 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_6.label }} </td>
+            {% for choice in form.investment_options_6 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_7.label }} </td>
+            {% for choice in form.investment_options_7 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_8.label }} </td>
+            {% for choice in form.investment_options_8 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_9.label }} </td>
+            {% for choice in form.investment_options_9 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td>{{ form.investment_options_10.label }} </td>
+            {% for choice in form.investment_options_10 %}
+            <td style="width: 800px" >{{ choice }}</td>
+            {% endfor %}
+    </tr>
+</table>
+
+
+
+<table class="table">
+
+    <th  colspan="8" style="font-size:24px"> Çevre farkındalığı </th>
+
+    <tr>
+
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_2.label }}</span> </td>
+            {% for choice in form.env_cons_2 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_3.label }}</span> </td>
+            {% for choice in form.env_cons_3 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_5.label }}</span> </td>
+            {% for choice in form.env_cons_5 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_6.label }}</span> </td>
+            {% for choice in form.env_cons_6 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_7.label }}</span> </td>
+            {% for choice in form.env_cons_7 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.env_cons_9.label }}</span> </td>
+            {% for choice in form.env_cons_9 %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.fate.label }}</span> </td>
+            {% for choice in form.fate %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 800px"><span style="font-style:italic;font-weight:bold">{{ form.believe.label }}</span> </td>
+            {% for choice in form.believe %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    </tr>
+
+
+</table>
+<table class="table">
+
+    <th colspan="8" style="font-size:24px" > Sosyodemografik bilgiler </th>
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.dep.label }}</span> </td>
+            {% for choice in form.dep %}
+            <td>{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.edu.label }}</span> </td>
+            {% for choice in form.edu %}
+            <td style="width: 30px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.age.label }}</span> </td>
+            {% for choice in form.age %}
+            <td style="width: 30px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.gen.label }}</span> </td>
+            {% for choice in form.gen %}
+            <td style="width: 30px" >{{ choice }}</td>
+            {% endfor %}
+
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.inc.label }}</span> </td>
+            {% for choice in form.inc %}
+            <td style="width: 300px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.h_inc.label }}</span> </td>
+            {% for choice in form.h_inc %}
+            <td style="width: 300px" >{{ choice }}</td>
+            {% endfor %}
+    <tr>
+            <td style="width: 600px"><span style="font-weight:bold">{{ form.gpa.label }}</span> </td>
+            {% for choice in form.gpa %}
+            <td style="width: 300px" >{{ choice }}</td>
+            {% endfor %}
+    </tr>
+</table>
+
+
+
+    <p>{% next_button %}</p>
+
+
+
+{% endblock %}

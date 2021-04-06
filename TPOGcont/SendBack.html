@@ -1,0 +1,24 @@
+
+
+{% block title %}
+   {{ round_number }} . TUR
+<p>
+    2. Dönem
+{% endblock %}
+
+{% block content %}
+<p>
+    İlk dönemde alıcıydınız ve karar verici size <strong>{{group.sent_amount}}</strong> gönderdi.
+<p>
+    İlk dönem kazancınız <strong>{{earnings}}</strong> oldu.
+<p>
+    Şimdi, bu dönemde siz karar vericisiniz ve sahip olduğunuz puan = {{subsession.endowment_Decider}}
+<p>
+    {{subsession.endowment_Decider}} puanınızın ne kadarını transfer edersiniz ? (0-{{subsession.maxtosend}})?
+
+    {% formfield group.sent_back_amount label=prompt %}
+    <p>{% next_button %}</p>
+    {% include Constants.table_template %}
+
+
+{% endblock %}

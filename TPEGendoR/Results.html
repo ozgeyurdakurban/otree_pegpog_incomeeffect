@@ -1,0 +1,238 @@
+
+
+{% block title %}
+    Tur sonu, sonuçlar
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:8px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:8px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-0l91{font-weight:bold;font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-pl7n{font-weight:bold;font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:center;vertical-align:top}
+.tg .tg-l5w2{font-size:14px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:center;vertical-align:top}
+.tg .tg-js9j{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0l91">Sıra</th>
+    <th class="tg-pl7n" colspan="2">1</th>
+    <th class="tg-pl7n" colspan="2">2</th>
+    <th class="tg-pl7n" colspan="2">3</th>
+    <th class="tg-pl7n" colspan="2">4</th>
+    <th class="tg-pl7n" colspan="2">5</th>
+    <th class="tg-pl7n" colspan="2">6</th>
+    <th class="tg-pl7n" colspan="2">7</th>
+    <th class="tg-pl7n" colspan="2">8</th>
+  </tr>
+  <tr>
+    <td class="tg-0l91">Rol</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+    <td class="tg-pl7n">Karar Verici</td>
+    <td class="tg-pl7n">Alıcı</td>
+  </tr>
+  <tr>
+    <td class="tg-0l91">Transfer Miktarı</td>
+    <td class="tg-l5w2">7 points (varsayılan)</td>
+    <td class="tg-l5w2" colspan="2">{{p2_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p3_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p4_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p5_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p6_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p7_transfer}}</td>
+    <td class="tg-l5w2" colspan="2">{{p8_transfer}}</td>
+    <td class="tg-l5w2">{{average_transfer}} (yuvarlanan)</td>
+  </tr>
+
+</table>
+
+{% if player.sequence == '1' %}
+
+
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+        {% elif player.sequence == '2' %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+
+        {% elif player.sequence == '3' %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+        {% elif player.sequence == '4' %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+
+        {% elif player.sequence == '5' %}
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+
+        {% elif player.sequence == '6' %}
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+        {% elif player.sequence == '7' %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+
+         {% else %}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-ifab{font-style:italic;font-size:24px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-74lp{font-weight:bold;font-size:20px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-nf96{font-weight:bold;font-size:16px;font-family:"Comic Sans MS", cursive, sans-serif !important;;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-nf96" colspan="3">Sonucunuz</th>
+  </tr>
+  <tr>
+    <td class="tg-74lp" colspan="2">Kazanç (EK x EA)</td>
+    <td class="tg-ifab">{{player.payoff}}</td>
+  </tr>
+</table>
+
+
+{% endif %}
+
+    <p>{% next_button %}</p>
+
+{% include Constants.table_template %}
+
+{% endblock %}

@@ -1,0 +1,160 @@
+
+
+{% block title %}
+    Tur sonu, sonuçlar
+{% endblock %}
+
+{% block content %}
+
+{% if player.role == 'A' %}
+
+
+        <p>
+
+<strong> Sonuçlarınız: </strong>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"><strong>Rol</strong></th>
+    <th class="tg-0lax"><strong>Transfer Miktarı</strong></th>
+    <th class="tg-0lax"><strong>Sonuç</strong></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><strong>Dönem 1</strong></td>
+    <td class="tg-0lax">Karar Verici</td>
+    <td class="tg-0lax">{{ group.sent_amount }}</td>
+    <td class="tg-0lax">{{ player1_period1_amount }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><strong>Dönem 2</strong></td>
+    <td class="tg-0lax">Alıcı</td>
+    <td class="tg-0lax">{{ group.sent_back_amount }}</td>
+    <td class="tg-0lax">{{ player1_period2_amount }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="3"><strong>Kazanç (EK x EA)</strong></td>
+    <td class="tg-0lax"><strong>{{ player.payoff }}</strong></td>
+  </tr>
+</table>
+
+        <p>
+            <p>Grubunuz : <b>{% if your_color == 'KIRMIZI' %}
+              <p style="color: red; font-size:100%;"> KIRMIZI </p>
+            {% else %}
+              <p style="color: blue; font-size:100%"> MAVİ </p>
+            {% endif %} </b>
+              </p>
+
+
+            <p>Partnerinizin grubu : <b>{% if partner_color == 'KIRMIZI' %}
+              <p style="color: red; font-size:100%;"> KIRMIZI </p>
+            {% else%}
+              <p style="color: blue; font-size:100%"> MAVİ </p>
+            {% endif %}</b>
+
+              </p>
+
+
+        <p>
+
+        <p>
+
+        <p>
+
+        <p>
+            İlk karar verici sizdiniz.
+            Partnerinize <strong> {{ group.sent_amount }}</strong> gönderdiniz,
+            ve ilk dönem sonucunuz <strong>{{ player1_period1_amount }}</strong> oldu.
+        </p>
+            İkinci dönemde partneriniz size <strong> {{ group.sent_back_amount }}</strong> gönderdi,
+            ve ikinci dönem sonucunuz <strong>{{ player1_period2_amount }}</strong> oldu.
+        </p>
+            <strong>{{ round_number }} </strong>. turda kazancınız = <strong> {{ player.payoff }}</strong>.
+
+
+
+        {% else %}
+
+
+        <p>
+<strong> Sonuçlarınız : </strong>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"><strong>Rol</strong></th>
+    <th class="tg-0lax"><strong>Transfer Miktarı</strong></th>
+    <th class="tg-0lax"><strong>Sonuç</strong></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><strong>Dönem 1</strong></td>
+    <td class="tg-0lax">Alıcı</td>
+    <td class="tg-0lax">{{ group.sent_amount }}</td>
+    <td class="tg-0lax">{{ player2_period1_amount }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"><strong>Dönem 2</strong></td>
+    <td class="tg-0lax">Karar Verici</td>
+    <td class="tg-0lax">{{ group.sent_back_amount }}</td>
+    <td class="tg-0lax">{{ player2_period2_amount }}</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="3"><strong>Kazanç (EK x EA)</strong></td>
+    <td class="tg-0lax"><strong>{{ player.payoff }}</strong></td>
+  </tr>
+</table>
+
+        <p>
+            <p>Grubunuz : <b>{% if your_color == 'KIRMIZI' %}
+              <p style="color: red; font-size:100%;"> KIRMIZI </p>
+            {% else %}
+              <p style="color: blue; font-size:100%"> MAVİ </p>
+            {% endif %} </b>
+              </p>
+
+
+            <p>Partnerinizin grubu : <b>{% if partner_color == 'KIRMIZI' %}
+              <p style="color: red; font-size:100%;"> KIRMIZI </p>
+            {% else%}
+              <p style="color: blue; font-size:100%"> MAVİ </p>
+            {% endif %}</b>
+
+              </p>
+
+
+        <p>
+        <p>
+            İlk dönemde alıcıydınız.
+            Partneriniz size <strong> {{ group.sent_amount }}</strong> gönderdi,
+            ve ilk dönem sonucunuz <strong>{{ player2_period1_amount }}</strong> oldu.
+        </p>
+            İkinci cönemde karar verici oldunuz ve
+            partnerinize <strong> {{ group.sent_back_amount }} </strong> gönderdiniz.
+            İkinci dönem sonucunuzz <strong>{{ player2_period2_amount }}</strong> oldu.
+
+        </p>
+            <strong>{{ round_number }} </strong>. turda kazancınız = <strong> {{ player.payoff }}</strong>.
+        </p>
+
+
+    {% endif %}
+
+    <p>{% next_button %}</p>
+
+{% include Constants.table_template %}
+
+{% endblock %}
